@@ -11,10 +11,10 @@
 # (Using that method instead of site.owner, in case your posts get cloned with your repo.)
 
 # Site settings
-title: Oxlumina
-description: _
+title: OxLumina
+description: Illuminate.
 owner:
-  name: _your name_ # or company name
+  name: OxLumina # or company name
   url: "https://oxlumina.com" # your URL
 first_published: 2020 # if migrating another site, the year of your first publish
                       # Must be a 4-digit integer year (math is used on it)
