@@ -606,6 +606,47 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
+/* New */
+
+        .img-circle {
+		border-radius: 50%;
+	}
+
+	.column {
+	  float: left;
+	  width: 25%;
+	  margin-bottom: 16px;
+	  padding: 0 8px;
+	}
+	
+	@media screen and (max-width: 650px) {
+	  .column {
+	    width: 100%;
+	    display: block;
+	  }
+	}
+	
+	.card {
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	}
+	
+	.container {
+	  padding: 0 16px;
+	}
+	
+	.container::after, .row::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+	}
+	
+	.title {
+	  color: grey;
+	}
+	
+
+	
+
 /* Image */
 
 	.image {
@@ -618,6 +659,11 @@ $baseurl: '{{ site.baseurl }}/images';
 			border-radius: 3px;
 			display: block;
 		}
+
+		&.round {
+                        border-radius: 50%;
+			float: right;
+                }
 
 		&.left {
 			float: left;
@@ -637,6 +683,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			top: 0.25em;
 		}
 
+		&.round,
 		&.left,
 		&.right,
 		&.note {
@@ -1879,7 +1926,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			font-size: 1.75em;
 			line-height: 1.75em;
 			opacity: 1;
-			padding: 0.35em 1em;
+			padding: 0.45em 4em; //Change here lenght lines
 			position: relative;
 			z-index: 1;
 			text-transform: none;
@@ -1888,11 +1935,12 @@ $baseurl: '{{ site.baseurl }}/images';
 //			@include vendor('transition', 'width 0.85s ease');
 //			@include vendor('transition-delay', '0.25s');
 				@include vendor('transition', 'width 0.85s ease');
-				@include vendor('transition-delay', '0');
+				@include vendor('transition-delay', '1');
 				background: _palette(fg-bold);
 				content: '';
-				display: block;
-				height: 2px;
+				//You can display block instead of border-top and border-bottom
+				//display: block;
+				//height: 2px;
 				position: absolute;
 				width: 100%;
 			}
@@ -1900,11 +1948,17 @@ $baseurl: '{{ site.baseurl }}/images';
 			&:before {
 				top: 0;
 				left: 0;
+				border-top: 2px solid;
+                        	//border-top-color: darkorchid;
+				border-bottom-color: white;
 			}
 
 			&:after {
 				bottom: 0;
 				right: 0;
+                        	border-bottom: 2px solid;
+				border-bottom-color: white;
+                        	//border-bottom-color: darkorchid;
 			}
 		}
 

@@ -2,7 +2,7 @@
 title: Credits
 permalink: /credits/
 options: nolanding, nomenu
-excerpt: People to thank
+excerpt: Credits for the website
 background-image: caustic_light.jpg
 ---
 <style>
@@ -54,39 +54,30 @@ article .inner .pcreds {
 </td></tr></table>
 
 <h4>Images</h4>
-<div class="box alt"><div class="row uniform 50%">
-{% for img in site.data.credits.image-credit
-%}<div class="4u">
-  {% if img.url %}<a style="border:none !important;" href="{{ img.url }}" target="_blank"
-     title="{% if img.by %}{{ img.by }}, {% endif %}{%
-               if img.lic %}{{ site.data.credits.licenses[img.lic].name }}{%
-               else %}public domain{%
-               endif %}">{%
-     endif %}<img style="width:100%"
-     src="{{ img.src | prepend: site.baseurl }}"
-     alt="the image being credited" />{% if img.url %}</a>{% endif %}
-</div>{%
-   endfor %}{%
-   for eimg in site.data.tokens.extra-image-credit
-%}<div class="4u">
-  {% if eimg.url %}<a style="border:none !important;" href="{{ eimg.url }}" target="_blank"
-     title="{% if eimg.by %}{{ eimg.by }}, {% endif %}{%
-               if eimg.lic %}{{ site.data.credits.licenses[eimg.lic].name }}{%
-               elsif eimg.license %}{{ eimg.license }}{%
-               else %}public domain{%
-               endif %}">{%
-     endif %}<img style="width:100%"
-     src="{{ eimg.src | prepend: site.baseurl }}"
-     alt="the image being credited" />{% if eimg.url %}</a>{% endif %}
-</div>{%
-   endfor %}
-</div></div>
-<p class="pcreds">{%
-if site.data.tokens.other-image-credit %}
-{{ site.data.tokens.other-image-credit}}{%
-else %}{{ site.data.credits.other-image-credit}}{%
-endif %}</p>
 
 
-<!-- Calm Ocean Panoramic Photography  by Denis Yudin from Pexels   -->
+<table style="width:100%">
+  <tr>
+    <th>Title</th>
+    <th>Author</th> 
+    <th>Website</th>
+  </tr>
+  <tr>
+    <td>Calm Ocean Panoramic</td>
+    <td>Denis Yudin</td> 
+    <td>Pexels</td>
+  </tr>
+  <tr>
+    <td>Men on Horses</td>
+    <td>Absolute Charm</td>
+    <td>Pexels</td>
+  </tr>
+  <tr>
+    <td>Woman in White Shirt</td>
+    <td>Oles Kanebckuu</td>
+    <td>Pexels</td>
+  </tr>
+</table>
 
+
+<!-- clear flask tubes lot Photo by Bill Oxford on Unsplash -->
