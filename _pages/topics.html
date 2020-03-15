@@ -8,6 +8,12 @@ image: team1.jpg
 background-image: team1.jpg
 ---
 
+<style>
+#more {display: none;}
+#more4 {display: none;}
+</style>
+
+
 <div class="row">
   <div class="column">
     <div align="center">
@@ -15,14 +21,15 @@ background-image: team1.jpg
       	<div class="container">
         <h2> Luca Ambroz </h2>
         <p class="title">Co-Founder</p>
-        <p > Luca is DPhil candidate in Particle Physics and Clarendon Scholar at the University of Oxford. He is interested in Higgs Physics and is currently member of the ATLAS experiment based at CERN near Geneva. He has obtained both his Bachelor and Master degrees (110/110 cum laude) from the University of Bologna. He has received the Gilberto Bernardini Award from the Italian Physical Society in 2018. In 2017 he has been awarded the Perkins Prize from the Oxford Sub-Department of Particle Physics. </p>
+        <p > Luca is DPhil candidate in Particle Physics<span id="dots"></span><span id="more"> and Clarendon Scholar at the University of Oxford. He is interested in Higgs Physics and is currently member of the ATLAS experiment based at CERN near Geneva. He has obtained both his Bachelor and Master degrees (110/110 cum laude) from the University of Bologna. He has received the Gilberto Bernardini Award from the Italian Physical Society in 2018. In 2017 he has been awarded the Perkins Prize from the Oxford Sub-Department of Particle Physics. </span></p>
+	<button onclick="myFunction()" id="myBtn">Read more</button>
 	</div>
     </div>
   </div>
 
   <div class="column">
     <div align="center">
-      <img class="img-circle" src="{{ site.baseurl }}/images/Hannah.jpg" alt="Candice" style="width:50%"/ align="centre"></span>
+      <img class="img-circle" src="{{ site.baseurl }}/images/Candice.jpeg" alt="Candice" style="width:50%"/ align="centre"></span>
       	<div class="container">
         <h2> Candice Carpenter </h2>
         <p class="title">Co-Founder</p>
@@ -33,7 +40,7 @@ background-image: team1.jpg
 
   <div class="column">
     <div align="center">
-      <img class="img-circle" src="{{ site.baseurl }}/images/Hannah.jpg" alt="Raad" style="width:50%"/ align="centre"></span>
+      <img class="img-circle" src="{{ site.baseurl }}/images/Raad.jpg" alt="Raad" style="width:50%"/ align="centre"></span>
         <div class="container">
         <h2> Raad Khan </h2>
         <p class="title">Co-Founder</p>
@@ -48,7 +55,8 @@ background-image: team1.jpg
         <div class="container">
         <h2> Hannah Nazri </h2>
         <p class="title">Co-Founder</p>
-        <p> Hannah is a medical doctor and DPhil candidate with a focus on endometriosis at the Nuffield Department of Women's and Reproductive Health, having previously earned a medical degree at the University of Bristol, a BSc (Hons) in Medical Physics and Bioengineering at University College London, and MSc Clinical Embryology at University of Oxford. Hannah is the Chair of the Board of Trustees of The Kalsom Movement, a Malaysian youth-led education charity, where she was awarded the Associate Fellowship of the Royal Commonwealth Society as a Finalist of the 2015 Queen’s Young Leaders Award by The Queen’s Diamond Jubilee Trust. In 2019, Hannah was featured as one of four inspirational women Associate Fellows of the Royal Commonwealth Society in Science. </p>
+        <p> Hannah is a medical doctor and DPhil candidate<span id="dots4"></span><span id="more4"> with a focus on endometriosis at the Nuffield Department of Women's and Reproductive Health, having previously earned a medical degree at the University of Bristol, a BSc (Hons) in Medical Physics and Bioengineering at University College London, and MSc Clinical Embryology at University of Oxford. Hannah is the Chair of the Board of Trustees of The Kalsom Movement, a Malaysian youth-led education charity, where she was awarded the Associate Fellowship of the Royal Commonwealth Society as a Finalist of the 2015 Queen’s Young Leaders Award by The Queen’s Diamond Jubilee Trust. In 2019, Hannah was featured as one of four inspirational women Associate Fellows of the Royal Commonwealth Society in Science. </span></p>
+	<button onclick="myFunction4()" id="myBtn4">Read more</button>
         </div>
     </div>
   </div>
@@ -56,3 +64,39 @@ background-image: team1.jpg
 
 </div>
 
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+<script>
+function myFunction4() {
+  var dots = document.getElementById("dots4");
+  var moreText = document.getElementById("more4");
+  var btnText = document.getElementById("myBtn4");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
