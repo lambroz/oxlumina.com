@@ -1,6 +1,6 @@
 ---
 title: Horse Racing
-excerpt: How to use this theme
+excerpt: Diagnostic
 tags: featured
 author: arkadianriver
 options: [minihead]
@@ -11,6 +11,7 @@ icon: trophy
 
 <hr />
 
-## Contents
+## Arthritis in horse
+
 
 
